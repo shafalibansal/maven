@@ -1,10 +1,5 @@
 node{
-	agent any
-	stages{
-		stage('Hello from GitHub'){
-			steps{
-				echo "Hello to GitHub"
-			}
-		}
+	stage('Hello from GitHub'){
+		echo 'Hello'
 	}
 }
