@@ -3,7 +3,7 @@ node{
 	stages{
 		stage('Hello from GitHub'){
 		steps{
-			echo "Hello to GitHub"
+			echo 'Hello to GitHub'
 		}
 	 }
     }
