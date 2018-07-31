@@ -1,6 +1,0 @@
-node{
-        stage('Hello from GitHub'){
-                echo "Hello"
-        }
-    
-}
