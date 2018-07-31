@@ -1,0 +1,6 @@
+node{
+	agent any
+	stage('Hello from GitHub'){
+		echo "Hello to GitHub"
+	}
+}
