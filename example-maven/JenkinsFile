@@ -1,5 +1,23 @@
 node{
-	stage('Hello from GitHub'){
-		echo 'Hello'
-	}
+       stage('checkout'){
+               git 'https://github.com/shafalibansal/maven.git'
+       }
+       stage('Build'){
+               dir('example-maven') {
+                    echo 'directory changed'
+                    bat 'mvn clean compile'
+                }
+               
+       }
+       stage('Test'){
+            dir('example-maven') {
+                    bat 'mvn test'
+                    junit '**/target/surefire-reports/TEST-*.xml'
+            }
+       }
+       stage('Package'){
+           dir('example-maven') {
+                bat 'mvn package'
+           }
+       }
 }
